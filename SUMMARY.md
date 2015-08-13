@@ -5,7 +5,7 @@
    * [安装Docker](chapter_fastlearn/install_docker.md)
    * Docker基本指令及用法
        * [docker images](chapter_fastlearn/docker_images.md)
-       * docker ps
+       * [docker ps](chapter_fastlearn/docker_ps.md)
        * docker save/load
        * docker pull/push/search
        * docker run/create
