@@ -8,6 +8,7 @@
        * docker ps
        * docker save/load
        * docker pull/push/search
+       * docker run/create
 * [案例讲解](examples.md)
 * 原理详解
 
