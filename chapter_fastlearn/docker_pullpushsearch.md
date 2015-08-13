@@ -51,8 +51,8 @@
 	docker.io/ubuntu   12.04    d0e008c6cf02   7 days ago   134.7 MB
 	docker.google/etcd 2.1.1    2c319269dd15   8 days ago   23.32 MB
 	docker.io/postgres latest   730d1d72bda2   2 weeks ago  265.3 MB
-	….
-	….
+	…
+	…
 
 
 
