@@ -54,6 +54,14 @@
 	…
 	…
 
+* **docker push**
+
+	
+	$ sudo docker push docker.io/ubuntu:latest
+	
+
+镜像的上传，push  默认是向官方仓库上传，由于服务器在国外，传输速度非常慢，就没试验成功过。注意的是，需要在docker  hub上注册过后才可以上传镜像哦。关于私有仓库的上传将在后面章节详细讲解。
+
 
 
 
