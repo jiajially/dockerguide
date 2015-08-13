@@ -11,11 +11,11 @@
 安装成功后，会在最后几行有提示：
 
 
-	Installed:                                                                                                     
-	  docker.x86_64 0:1.7.1-108.el7.centos                                               
-	                                                                                                                     
+	Installed:                                                        
+	  docker.x86_64 0:1.7.1-108.el7.centos                        
+	           
 	Dependency Installed:
-	  docker-selinux.x86_64 0:1.7.1-108.el7.centos                                  
+	  docker-selinux.x86_64 0:1.7.1-108.el7.centos                  
 	
 	Complete!
 	
