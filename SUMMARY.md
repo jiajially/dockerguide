@@ -13,6 +13,7 @@
        * [docker run 参数详解](－v指令)
            * －d指令
            * －it  －a指令
+           * －v指令
 * [案例讲解](examples.md)
 * 原理详解
 
