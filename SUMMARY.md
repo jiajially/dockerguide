@@ -25,12 +25,13 @@
        * －it  －a指令
        * －p/P指令
        * －v指令
-       * --name指令
        * --rm指令
+       * --name指令
        * 网络配置
            * --add-host指令
            * --net指令
            * --dns指令
+       * 容器管理
 * [案例讲解](examples.md)
 * 原理详解
 
