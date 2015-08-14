@@ -10,16 +10,6 @@
        * [docker pull/push/search](chapter_fastlearn/docker_pullpushsearch.md)
        * [docker run/create](chapter_fastlearn/docker_runcreate.md)
        * [docker  atttach/nsenter /-i  -t](chapter_fastlearn/docker_atttach_nsenter_-i_-_t.md)
-       * [docker run 参数详解](chapter_fastlearn/docker_run/README.md)
-           * --name指令
-           * －d指令
-           * －it  －a指令
-           * －p/P指令
-           * －v指令
-           * --rm指令
-           * --add-host指令
-           * --dns指令
-           * 网络配置
    * [docker run 参数详解](chapter_fastlearn/docker_run/README.md)
        * 网络配置
            * --add-host指令
