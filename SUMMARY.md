@@ -11,7 +11,7 @@
        * [docker run/create](chapter_fastlearn/docker_runcreate.md)
        * [docker  atttach/nsenter /-i  -t](chapter_fastlearn/docker_atttach_nsenter_-i_-_t.md)
        * [docker run 参数详解](chapter_fastlearn/docker_run/README.md)
-           * --name
+           * --name指令
            * －d指令
            * －it  －a指令
            * －p/P指令
