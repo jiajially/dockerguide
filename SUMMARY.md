@@ -21,7 +21,6 @@
            * --dns指令
            * 网络配置
    * [docker run 参数详解](chapter_fastlearn/docker_run/README.md)
-       * －d指令
        * －v指令
        * 网络配置
            * --add-host指令
