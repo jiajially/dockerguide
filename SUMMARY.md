@@ -14,8 +14,8 @@
            * --name
            * －d指令
            * －it  －a指令
-           * －v指令
            * －p/P指令
+           * －v指令
            * --rm指令
            * -add-host指令
 * [案例讲解](examples.md)
