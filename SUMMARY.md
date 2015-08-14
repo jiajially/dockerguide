@@ -17,7 +17,7 @@
            * －p/P指令
            * －v指令
            * --rm指令
-           * -add-host指令
+           * --add-host指令
            * --dns指令
            * --net指令
 * [案例讲解](examples.md)
