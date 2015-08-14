@@ -10,7 +10,7 @@
        * [docker pull/push/search](chapter_fastlearn/docker_pullpushsearch.md)
        * [docker run/create](chapter_fastlearn/docker_runcreate.md)
        * [docker  atttach/nsenter /-i  -t](chapter_fastlearn/docker_atttach_nsenter_-i_-_t.md)
-       * docker run 参数详解
+       * [docker run 参数详解](－v指令)
            * －d指令
            * －it  －a指令
 * [案例讲解](examples.md)
