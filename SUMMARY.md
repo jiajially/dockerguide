@@ -23,7 +23,6 @@
    * [docker run 参数详解](chapter_fastlearn/docker_run/README.md)
        * －d指令
        * －it  －a指令
-       * －p/P指令
        * －v指令
        * 网络配置
            * --add-host指令
