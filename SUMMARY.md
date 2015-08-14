@@ -30,6 +30,7 @@
        * --add-host指令
        * --dns指令
        * 网络配置
+           * --net指令
 * [案例讲解](examples.md)
 * 原理详解
 
