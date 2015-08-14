@@ -18,6 +18,7 @@
            * －v指令
            * --rm指令
            * -add-host指令
+           * --dns指令
 * [案例讲解](examples.md)
 * 原理详解
 
