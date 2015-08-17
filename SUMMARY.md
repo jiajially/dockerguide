@@ -24,7 +24,7 @@
        * 数据管理
            * -v 参数
            * --volumes-from 参数
-       * 性能参数
+       * [性能参数](chapter_fastlearn/docker_run/capability.md)
            * -m 参数
            * -c 参数
 * [案例讲解](examples.md)
