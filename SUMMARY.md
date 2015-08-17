@@ -13,7 +13,7 @@
    * [docker run 参数详解](chapter_fastlearn/docker_run/README.md)
        * 网络配置
            * --add-host 参数
-           * --net指令
+           * --net 参数
            * --dns指令
            * -p/P 指令
        * 容器管理
