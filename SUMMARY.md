@@ -23,7 +23,7 @@
            * -it -a 参数
        * [数据管理](chapter_fastlearn/docker_run/data_manager.md)
            * [-v 参数](chapter_fastlearn/docker_run/-v.md)
-           * --volumes-from 参数
+           * [--volumes-from 参数](chapter_fastlern/docker_run/--volumes-from.md)
        * [性能参数](chapter_fastlearn/docker_run/capability.md)
            * -m 参数
            * -c 参数
