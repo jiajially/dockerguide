@@ -12,7 +12,7 @@
        * [docker  atttach/nsenter /-i  -t](chapter_fastlearn/docker_atttach_nsenter_-i_-_t.md)
    * [docker run 参数详解](chapter_fastlearn/docker_run/README.md)
        * 网络配置
-           * --add-host指令
+           * --add-host 参数
            * --net指令
            * --dns指令
            * -p/P 指令
