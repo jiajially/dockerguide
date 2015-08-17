@@ -16,7 +16,7 @@
            * --net 参数
            * --dns 参数
            * -p/P  参数
-       * 容器管理
+       * [容器管理](chapter_fastlearn/docker_run/container_manager.md)
            * －d 参数
            * --name 参数
            * --rm 参数
