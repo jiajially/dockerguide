@@ -20,7 +20,7 @@
            * －d 指令
            * --name 指令
            * --rm指令
-           * -it -a指令
+           * -it -a 参数
        * 数据管理
            * -v 参数
            * --volumes-from 参数
