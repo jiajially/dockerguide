@@ -1,5 +1,5 @@
 
-## 　VOLUME (shared filesystems)
+##VOLUME (shared filesystems)
 Docker内部以及容器之间管理数据，在容器中管理数据主要有两种方式：
 
     -v=[]:                 Create a bind mount with: [host-dir]:[container-dir]:[rw|ro].
