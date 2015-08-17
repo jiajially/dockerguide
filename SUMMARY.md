@@ -25,7 +25,7 @@
            * -v 参数
            * --volumes-from 参数
        * 性能参数
-           * -m 指令
+           * -m 参数
 * [案例讲解](examples.md)
 * 原理详解
 
