@@ -23,6 +23,7 @@
            * -it -a指令
        * 数据管理
            * -v 指令
+           * --volumes-from 参数
        * 性能参数
            * -m 指令
 * [案例讲解](examples.md)
