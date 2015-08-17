@@ -17,7 +17,7 @@
            * --dns 参数
            * -p/P  参数
        * [容器管理](chapter_fastlearn/docker_run/container_manager.md)
-           * [－d 参数](chapter_fastlearn/docker_run/d.md)
+           * [－d 参数](chapter_fastlearn/docker_run/-d.md)
            * [--name 参数](chapter_fastlearn/docker_run/--name.md)
            * [--rm 参数](chapter_fastlearn/docker_run/--rm.md)
            * -it -a 参数
