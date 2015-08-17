@@ -20,7 +20,7 @@
            * [--name 参数](chapter_fastlearn/docker_run/--name.md)
            * [--rm 参数](chapter_fastlearn/docker_run/--rm.md)
            * [-d 参数](chapter_fastlearn/docker_run/-d.md)
-           * [-it -a 参数](chapter_fastlearn/docker_run/-i_t_a.md)
+           * [-i-t-a 参数](chapter_fastlearn/docker_run/-i_t_a.md)
        * [数据管理](chapter_fastlearn/docker_run/data_manager.md)
            * [-v 参数](chapter_fastlearn/docker_run/-v.md)
            * [--volumes-from 参数](chapter_fastlern/docker_run/--volumes-from.md)
