@@ -15,7 +15,7 @@
            * --add-host 参数
            * --net 参数
            * --dns 参数
-           * -p/P  参数
+           * [-p/P  参数](chapter_fastlearn/docker_run/-p.md)
        * [容器管理](chapter_fastlearn/docker_run/container_manager.md)
            * [--name 参数](chapter_fastlearn/docker_run/--name.md)
            * [--rm 参数](chapter_fastlearn/docker_run/--rm.md)
