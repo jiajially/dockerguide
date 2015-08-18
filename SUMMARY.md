@@ -10,7 +10,7 @@
        * [docker run/create](chapter_fastlearn/docker_runcreate.md)
        * [docker  atttach/nsenter /-i  -t](chapter_fastlearn/docker_atttach_nsenter_-i_-_t.md)
    * [docker run 参数详解](chapter_fastlearn/docker_run/README.md)
-       * 访问互联
+       * [访问互联](chapter_fastlearn/docker_run/-p_link.md)
            * [-p/P  参数](chapter_fastlearn/docker_run/-p.md)
            * [--link 参数](chapter_fastlearn/docker_run/--link.md)
        * [容器管理](chapter_fastlearn/docker_run/container_manager.md)
