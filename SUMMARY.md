@@ -32,5 +32,6 @@
        * 定制docker0
    * 仓库服务
 * [案例讲解](examples.md)
+   * swarm集群管理
 * 原理详解
 
