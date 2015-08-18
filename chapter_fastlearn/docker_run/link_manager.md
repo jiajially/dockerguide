@@ -21,6 +21,6 @@ Dockefile在网络方面除了提供一个EXPOSE之外，没有提供其它选�
 1. 使用--link来启动container。
 
 
-如果使用-p或者-P，那么container会开发部分端口到host，只要对方可以连接到host，就可以连接到container内部。当使用-P时，docker会在host中随机从49153 和65535之间查找一个未被占用的端口绑定到container。你可以使用docker port来查找这个随机绑定端口。　　
+如果使用-p或者-P，那么container会开发部分端口到host，只要对方可以连接到host，就可以连接到container内部。当使用-P时，docker会在host中随机一个未被占用的端口绑定到container。你可以使用docker port来查找这个随机绑定端口。　　
 
 当你使用--link方式时，作为客户端的container可以通过私有网络形式访问到这个container。同时Docker会在客户端的container中设定一些环境变量来记录绑定的IP和PORT。
