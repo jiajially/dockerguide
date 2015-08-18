@@ -25,8 +25,9 @@
            * [-m 参数](chapter_fastlearn/docker_run/-m.md)
            * -c 参数
    * 高级网络配置
+        * 配置DNS
    * 仓库服务
-       * 配置DNS
+       
 * [案例讲解](examples.md)
 * 原理详解
 
