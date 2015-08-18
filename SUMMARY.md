@@ -2,6 +2,8 @@
 
 * [前言](README.md)
 * [Docker 快速入门](fastlearn.md)
+   * [安装Docker](chapter_fastlearn/install_docker.md)
+       * 仓库服务
    * [Docker基本指令及用法](chapter_fastlearn/sudo_docker.md)
        * [docker images](chapter_fastlearn/docker_images.md)
        * [docker ps](chapter_fastlearn/docker_ps.md)
@@ -27,8 +29,6 @@
        * [性能参数](chapter_fastlearn/docker_run/capability.md)
            * [-m 参数](chapter_fastlearn/docker_run/-m.md)
            * -c 参数
-* [安装Docker](chapter_fastlearn/install_docker.md)
-   * 仓库服务
 * [案例讲解](examples.md)
 * 原理详解
 
