@@ -1,7 +1,7 @@
 # Summary
 
 * [前言](README.md)
-* [Docker 快速入门](快速入门/fastlearn.md)
+* [Docker 快速入门](fastlearn.md)
    * [安装Docker](chapter_fastlearn/install_docker.md)
    * [Docker基本指令及用法](chapter_fastlearn/sudo_docker.md)
        * [docker images](chapter_fastlearn/docker_images.md)
