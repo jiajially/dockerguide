@@ -6,15 +6,18 @@ Docker 允许通过外部访问容器或容器互联的方式来提供网络服�
 
 Dockefile在网络方面除了提供一个EXPOSE之外，没有提供其它选项。下面这些参数可以覆盖Dockefile的expose默认值：
     
-    --expose=[]   : Expose a port or a range of ports from the container without publishing it to your host
+    --expose=[]   : Expose a port or a range of ports from the container 
+                    without publishing it to your host
     -P=false      : Publish all exposed ports to the host interfaces
     -p=[]         : Publish a container᾿s port to the host (format:
-                  ip:hostPort:containerPort | ip::containerPort |
-                  hostPort:containerPort | containerPort)
-                  (use 'docker port' to see the actual mapping)
+                    ip:hostPort:containerPort | ip::containerPort |
+                    hostPort:containerPort | containerPort)
+                    (use 'docker port' to see the actual mapping)
     --link=""     : Add link to another container (name:alias)
     
---expose可以让container接受外部传入的数据。container内监听的port不需要和外部host的port相同。比如说在container内部，一个HTTP服务监听在80端口，对应外部host的port就可能是49880.　　<br>　　操作人员可以使用--expose，让新的container访问到这个container。具体有三个方式
+--expose可以让container接受外部传入的数据。container内监听的port不需要和外部host的port相同。比如说在container内部，一个HTTP服务监听在80端口，对应外部host的port就可能是49880。
+
+操作人员可以使用--expose，让新的container访问到这个container。具体有三个方式
   
 1. 使用-p来启动container。
 1. 使用-P来启动container。
