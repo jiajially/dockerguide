@@ -13,10 +13,10 @@
    * [docker run 参数详解](chapter_fastlearn/docker_run/README.md)
        * 网络配置
            * [-p/P  参数](chapter_fastlearn/docker_run/-p.md)
+           * [--link 参数](chapter_fastlearn/docker_run/--link.md)
            * --add-host 参数
            * --net 参数
            * --dns 参数
-           * [--link 参数](chapter_fastlearn/docker_run/--link.md)
        * [容器管理](chapter_fastlearn/docker_run/container_manager.md)
            * [--name 参数](chapter_fastlearn/docker_run/--name.md)
            * [--rm 参数](chapter_fastlearn/docker_run/--rm.md)
