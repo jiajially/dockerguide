@@ -16,8 +16,7 @@
 	$ sudo docker ps -a
 	CONTAINER ID        IMAGE                    COMMAND                     CREATED             STATUS              PORTS               NAMES
 	a637c1d67506        ubuntu:latest            "/bin/echo 'Hello wo        4 minutes ago                                               mad_hopper          
-	…
-	…
+	...
 	
 	
 然后在启动它
@@ -69,8 +68,7 @@
 	$ sudo  docker ps -a
 	CONTAINER ID        IMAGE                  COMMAND                CREATED               STATUS                      PORTS               NAMES
 	61f37c1940c8        ubuntu:latest          "/bin/sh -c 'while t   4 seconds ago         Up 3 seconds                                    prickly_galileo 
-	…
-	…
+	...
 
 
 查看容器输出的信息
@@ -81,8 +79,7 @@
 	hello world
 	hello world
 	hello world
-	….
-	….
+	...
 	
 
 *注意，让容器以后台方式运行，并不是加一个 -d 参数就可以，命令行COMMAND所执行的动作必须为持续运行的状态。
