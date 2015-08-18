@@ -14,7 +14,6 @@
        * 网络配置
            * [-p/P  参数](chapter_fastlearn/docker_run/-p.md)
            * [--link 参数](chapter_fastlearn/docker_run/--link.md)
-           * --net 参数
            * --dns 参数
        * [容器管理](chapter_fastlearn/docker_run/container_manager.md)
            * [--name 参数](chapter_fastlearn/docker_run/--name.md)
