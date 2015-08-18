@@ -35,5 +35,6 @@
    * swarm集群管理
    * zookeeper集群搭建
    * kubernetes集群管理
+   * ketty在集群中简单使用
 * 原理详解
 
