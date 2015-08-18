@@ -12,10 +12,10 @@
        * [docker  atttach/nsenter /-i  -t](chapter_fastlearn/docker_atttach_nsenter_-i_-_t.md)
    * [docker run 参数详解](chapter_fastlearn/docker_run/README.md)
        * 网络配置
+           * [-p/P  参数](chapter_fastlearn/docker_run/-p.md)
            * --add-host 参数
            * --net 参数
            * --dns 参数
-           * [-p/P  参数](chapter_fastlearn/docker_run/-p.md)
            * [--link 参数](chapter_fastlearn/docker_run/--link.md)
        * [容器管理](chapter_fastlearn/docker_run/container_manager.md)
            * [--name 参数](chapter_fastlearn/docker_run/--name.md)
