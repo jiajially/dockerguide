@@ -1,6 +1,7 @@
 
 ## Runtime constraints on CPU and memory
 
+***目前相关资料还没有收齐，还在学习之中***
 
 
 下面的参数可以用来调整container内的性能参数。
