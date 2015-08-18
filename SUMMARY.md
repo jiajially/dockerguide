@@ -34,5 +34,6 @@
 * [案例讲解](examples.md)
    * swarm集群管理
    * zookeeper集群搭建
+   * kubernetes集群管理
 * 原理详解
 
