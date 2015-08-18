@@ -21,7 +21,7 @@
        * [性能参数](chapter_fastlearn/docker_run/capability.md)
            * [-m 参数](chapter_fastlearn/docker_run/-m.md)
            * -c 参数
-       * [访问互联](chapter_fastlearn/docker_run/-p_link.md)
+       * [访问互联](chapter_fastlearn/docker_run/link_manager.md)
            * [-p/P  参数](chapter_fastlearn/docker_run/-p.md)
            * [--link 参数](chapter_fastlearn/docker_run/--link.md)
    * 高级网络配置
