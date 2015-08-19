@@ -7,7 +7,7 @@
    * Docker 镜像
    * Docker 容器
    * [Docker基本指令及用法](chapter_fastlearn/sudo_docker.md)
-       * [docker images](chapter_fastlearn/docker_images.md)
+       * [images](chapter_fastlearn/docker_images.md)
        * [docker ps/kill/rm/rmi](chapter_fastlearn/docker_ps.md)
        * [docker save/load](chapter_fastlearn/docker_saveload.md)
        * [docker pull/push/search](chapter_fastlearn/docker_pullpushsearch.md)
