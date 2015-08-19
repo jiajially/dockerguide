@@ -5,6 +5,7 @@
 * [Docker 快速入门](chapter_fastlearn/README.md)
    * [Docker 安装](chapter_fastlearn/install_docker.md)
    * Docker 镜像
+       * 初识Dockerfile
    * Docker 容器
    * [Docker基本指令及用法](chapter_fastlearn/sudo_docker.md)
        * [images](chapter_fastlearn/docker_images.md)
