@@ -10,8 +10,10 @@
        * 实战：创建镜像
    * Docker 容器
        * 从一个Container开始
-       * 容器通信
        * 容器的日常
+       * 管理容器数据
+       * 容器的通信
+       * 容器自动化
    * [Docker 基本指令及用法](chapter_fastlearn/sudo_docker.md)
        * [images](chapter_fastlearn/docker_images.md)
        * [ps/kill/rm/rmi](chapter_fastlearn/docker_ps.md)
