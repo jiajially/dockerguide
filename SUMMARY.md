@@ -6,8 +6,8 @@
    * [Docker 安装](chapter_fastlearn/install_docker.md)
    * [Docker 镜像](Dockerfile结构)
        * 初识Dockerfile
-       * 创建一个简单的镜像
        * Dockerfile结构
+       * 创建一个简单的镜像
    * Docker 容器
    * [Docker基本指令及用法](chapter_fastlearn/sudo_docker.md)
        * [images](chapter_fastlearn/docker_images.md)
