@@ -12,7 +12,7 @@
        * [save/load](chapter_fastlearn/docker_saveload.md)
        * [pull/push/search](chapter_fastlearn/docker_pullpushsearch.md)
        * [run/create](chapter_fastlearn/docker_runcreate.md)
-       * [atttach/nsenter /-i  -t](chapter_fastlearn/docker_atttach_nsenter_-i_-_t.md)
+       * [atttach](chapter_fastlearn/docker_atttach_nsenter_-i_-_t.md)
        * commit
    * [docker run 参数详解](chapter_fastlearn/docker_run/README.md)
        * [容器管理](chapter_fastlearn/docker_run/container_manager.md)
