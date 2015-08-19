@@ -15,6 +15,7 @@
 
 	
     $ sudo docker run -d --name=test_name registry.liugang/centos:latest 
+    f78375b1c487e03c9438c729345e54db9d20cfa2ac1fc3494b6eb60872e74778
 	$ sudo docker ps -a
 	CONTAINER ID        IMAGE                            COMMAND       CREATED             STATUS                      PORTS       NAMES
 	f78375b1c487        registry.liugang/centos:latest   "/bin/bash"   17 seconds ago      Exited (0) 17 seconds ago               test_name       
