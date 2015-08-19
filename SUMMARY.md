@@ -4,7 +4,7 @@
 * [笔者感想](impression.md)
 * [Docker 快速入门](chapter_fastlearn/README.md)
    * [Docker 安装](chapter_fastlearn/install_docker.md)
-   * Docker 镜像
+   * [Docker 镜像](Dockerfile结构)
        * 初识Dockerfile
        * 创建一个简单的镜像
    * Docker 容器
