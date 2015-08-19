@@ -32,6 +32,7 @@
        * 为主机绑定容器端口
        * 定制docker0
    * 仓库服务
+   * Docker 镜像
 * [案例讲解](examples.md)
    * swarm集群管理
    * zookeeper集群搭建
