@@ -14,7 +14,7 @@
 使用--name=evil_ptolemy",若不加此指令，docker会自动给新创建出来的容器分配一个唯一的name
 
 	
-    $ sudo docker run --name=test_name registry.liugang/centos:latest 
+    $ sudo docker run -d --name=test_name registry.liugang/centos:latest 
 	$ sudo docker ps -a
 	CONTAINER ID        IMAGE                            COMMAND       CREATED             STATUS                      PORTS       NAMES
 	f78375b1c487        registry.liugang/centos:latest   "/bin/bash"   17 seconds ago      Exited (0) 17 seconds ago               test_name       
