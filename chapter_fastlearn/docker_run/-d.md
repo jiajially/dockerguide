@@ -1,7 +1,5 @@
 
-## -d 参数 
-
-Detached 守护态运行
+## 守护态运行  Detached 
 
 当我们启动一个container时，首先需要确定这个container是运行在前台模式还是运行在后台模式。
 	
