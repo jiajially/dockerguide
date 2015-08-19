@@ -7,7 +7,7 @@
    * [Docker 镜像](Dockerfile结构)
        * 初识Dockerfile
        * Dockerfile结构
-       * 实战利用Dockerfile创建镜像
+       * 实战：创建镜像
    * Docker 容器
    * [Docker基本指令及用法](chapter_fastlearn/sudo_docker.md)
        * [images](chapter_fastlearn/docker_images.md)
