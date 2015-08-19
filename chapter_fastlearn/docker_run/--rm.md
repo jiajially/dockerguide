@@ -1,9 +1,9 @@
 
-## -rm 参数
+## 清除容器
 
 
 
-Clean up (--rm)
+Clean up (--rm)  指在容器运行完之后自动清除
 
 	--rm=false: Automatically remove the container when it exits (incompatible with -d)
 	
