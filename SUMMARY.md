@@ -2,6 +2,12 @@
 
 * [前言](README.md)
 * [笔者感想](impression.md)
+* [Docker简介](dockerIND.md)
+* [Docker 核心技术](dockerCore.md)
+	* [隔离性 Linux namespace](dockerCoreNs.md)
+	* [可配额／可度量 Cgroups](dockerCoreCgroups.md)
+	* [便携性 AUFS](dockerCoreAUFS.md)
+	* [安全性 AppArmor,SELinux,GRSEC](dockerCoreASG.md)
 * [Docker 快速入门](chapter_fastlearn/README.md)
    * [Docker 安装](chapter_fastlearn/install_docker.md)
    * [Docker 镜像](Dockerfile)
@@ -21,8 +27,8 @@
        * [pull/push/search](chapter_fastlearn/docker_pullpushsearch.md)
        * [run/create](chapter_fastlearn/docker_runcreate.md)
        * [atttach](chapter_fastlearn/docker_atttach_nsenter_-i_-_t.md)
-       * commit
-   * [Docker run 参数详解](chapter_fastlearn/docker_run/README.md)
+       * [commit](chapter_fastlearn/docker_commit.md)
+	* [Docker run 参数详解](chapter_fastlearn/docker_run/README.md)
        * [容器管理](chapter_fastlearn/docker_run/container_manager.md)
            * [--name 参数](chapter_fastlearn/docker_run/--name.md)
            * [--rm 参数](chapter_fastlearn/docker_run/--rm.md)
