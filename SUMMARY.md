@@ -4,7 +4,7 @@
 * [笔者感想](impression.md)
 * [Docker简介](dockerIND.md)
 * [Docker 核心技术](dockerCore.md)
-	* [隔离性 Linux namespace](dockerCoreNs.md)
+	* [隔离性 Linux namespace](dockerCoreNS.md)
 	* [可配额／可度量 Cgroups](dockerCoreCgroups.md)
 	* [便携性 AUFS](dockerCoreAUFS.md)
 	* [安全性 AppArmor,SELinux,GRSEC](dockerCoreASG.md)
