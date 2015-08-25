@@ -59,10 +59,11 @@ Links 允许容器发现另一个容器，并在期间建立一个安全的通�
 alias代表你 为这个链接起的一个别名。
 
 	--link <name or id>
+该参数将匹配容器name 并建立连接
 
-	
-	$ docker inspect -f "{{ .HostConfig.Links }}" web
-	[/db:/web/db]
+	$ docker run -d -P --name web --link db training/webapp python app.py
+
+使用docker inspect 定位:
 
 你可以看到web容器已经与db容器连接
 
