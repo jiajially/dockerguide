@@ -17,6 +17,12 @@
 
 * 例子
 
+		root@liugang:~# docker login
+		Username: username
+		Password: ****
+		Email: user@domain.com
+		Login Succeeded
+
 * 总结
 
 	登录Hub服务。

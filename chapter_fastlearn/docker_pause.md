@@ -12,8 +12,12 @@
 
 * 例子
 
-* 总结
-
+		$ sudo docker pauese hopeful_feynman
+		hopeful_feynman
+		CONTAINER ID    IMAGE     COMMAND      CREATED         STATUS                 PORTS       NAMES
+		c9a12157fed7    centos    "/bin/bash"  9 minutes ago   Up 9 minutes (Paused)              hopeful_feynman 
+	
+	使容器内进程暂停		
 
 ## unpause
 
@@ -29,5 +33,8 @@
 
 * 例子
 
-* 总结
+		$ sudo docker pauese hopeful_feynman
+		hopeful_feynman
+	恢复暂停
+
 
