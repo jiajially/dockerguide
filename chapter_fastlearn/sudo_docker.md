@@ -8,7 +8,7 @@ Docker官方为了让用户快速了解Docker，提供了一个交互式教程�
     Usage: docker [OPTIONS] COMMAND [arg...]
 
 	A self-sufficient runtime for linux containers.
-	
+
     Options:
 	--add-registry=[]                    Registry to query before a public one
   	--api-cors-header=                   Set CORS headers in the remote API
@@ -107,37 +107,39 @@ Docker官方为了让用户快速了解Docker，提供了一个交互式教程�
 | -- | -- |
 | 环境信息相关 | info   version |
 | 系统运维相关 | attach build  commit  cp   diff   export   images  import  <br> save/load  inspect  kill  port   pause/unpause  <br> ps  rm   rmi   run   start/stop/restart  tag  top   |
-| 日志信息相关 | events  history logs | 
+| 日志信息相关 | events  history logs |
 | 仓库服务相关 |  login  pull  push  search|
 
-1. 参数约定
-	
-	单个字符的参数可以放在一起组合配置，例如
+1.参数约定
 
-		$ sudo docker run -t -i --name test centos sh 
-	
-	可以用这样的方式等同：
+单个字符的参数可以放在一起组合配置，例如
 
-		$ sudo docker run -ti --name test centos sh
+	$ sudo docker run -t -i --name test centos sh
 
-1. Boolean
+可以用这样的方式等同：
 
-	Boolean参数形式如： -d=false。注意，当你声明这个Boolean参数时，比如 docker run -d=true，它将直接把启动的Container挂起放在后台运行。
+	$ sudo docker run -ti --name test centos sh
 
-1. 字符串和数字
+2.Boolean
 
-	参数如 --name=“” 定义一个字符串，它仅能被定义一次。同类型的如-c=0 定义一个数字，它也只能被定义一次。
+Boolean参数形式如： -d=false。注意，当你声明这个Boolean参数时，比如 docker run -d=true，它将直接把启动的Container挂起放在后台运行。
 
-1. 后台进程
+3.字符串和数字
+
+参数如 --name=“” 定义一个字符串，它仅能被定义一次。同类型的如-c=0 定义一个数字，它也只能被定义一次。
+
+4.后台进程
+
 Docker后台进程是一个常驻后台的系统进程，值得注意的是Docker使用同一个文件来支持客户端和后台进程，其中角色切换通过-d来实现。这个后台进程是用来管理容器的:
-	
-	| 参数 | 解释 |
-	| -- | -- |
-	| --add-registry=[] 				   |Registry to query before a public one |                    
-  	|--api-cors-header=                   |Set CORS headers in the remote API|
-  	|-b, --bridge=                        |挂载已经存在的网桥设备到 Docker 容器里。注意，使用 none 可以停用容器里的网络。|
-  	|--bip=                               |使用 CIDR 地址来设定网络桥的 IP。注意，此参数和 -b 不能一起使用。|
-  	|--block-registry=[]                  |Don't contact given registry|
+
+
+| 参数 | 解释 |
+| -- | -- |
+| --add-registry=[] 				   |Registry to query before a public one |
+|--api-cors-header=                   |Set CORS headers in the remote API|
+|-b, --bridge=                        |挂载已经存在的网桥设备到 Docker 容器里。注意，使用 none 可以停用容器里的网络。|
+|--bip=                               |使用 CIDR 地址来设定网络桥的 IP。注意，此参数和 -b 不能一起使用。|
+|--block-registry=[]                  |Don't contact given registry|
   	|--confirm-def-push=true              |Confirm a push to default registry|
   	|-D, --debug=false                    |开启Debug模式。例如：docker -d -D|
   	|-d, --daemon=false                   |开启Daemon模式。|
@@ -179,7 +181,7 @@ Docker后台进程是一个常驻后台的系统进程，值得注意的是Docke
   	|--tlsverify=false                    |使用TLS并做后台进程与客户端通讯的验证|
   	|--userland-proxy=true                |Use userland proxy for loopback traffic|
   	|-v, --version=false                  |显示版本信息|
-  	
-  	注意，其中带有[] 的启动参数可以指定多次，例如
 
-		$ sudo docker run -a stdin -a stdout -a stderr -i -t ubuntu /bin/bash
+注意，其中带有[] 的启动参数可以指定多次，例如:
+
+	$ sudo docker run -a stdin -a stdout -a stderr -i -t ubuntu /bin/bash

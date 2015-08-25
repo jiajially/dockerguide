@@ -115,9 +115,9 @@ prefix_PROTO 参数包含URL的传输协议, for example
 
 如果容器暴露多个端口，Docker将会为每个端口创建三个环境变量。算术题：如果容器暴露4个端口，将会创建多少个环境变量？答对了，是12个哦！每个端口三个环境变量。
 
-另外，Docker也要创建一个叫 <alias>_PORT 的环境变量。这个变量包含源容器URL首次暴露的IP和端口。该端口的“首次”定义为最低级数字的端口。例如，思考WEBDB_PORT=tcp://172.17.0.82:5432 变量，如果该端口同时用语TCP和UDP，则TCP将会被指定。（原文：Additionally, Docker creates an environment variable called <alias>_PORT. This variable contains the URL of the source container’s first exposed port. The ‘first’ port is defined as the exposed port with the lowest number. For example, consider the WEBDB_PORT=tcp://172.17.0.82:5432 variable. If that port is used for both tcp and udp, then the tcp one is specified.）
+另外，Docker也要创建一个叫 <alias>_PORT 的环境变量。这个变量包含源容器URL首次暴露的IP和端口。该端口的“首次”定义为最低级数字的端口。例如，思考WEBDB_PORT=tcp://172.17.0.82:5432 变量，如果该端口同时用语TCP和UDP，则TCP将会被指定。（原文：*Additionally, Docker creates an environment variable called <alias>_PORT. This variable contains the URL of the source container’s first exposed port. The ‘first’ port is defined as the exposed port with the lowest number. For example, consider the WEBDB_PORT=tcp://172.17.0.82:5432 variable. If that port is used for both tcp and udp, then the tcp one is specified.*）
 
-最后，Docker会把源容器中的环境变量暴露给目标容器作为环境变量。并且Docker会在目标容器为每个变量创建一个<alias>_ENV_<name>变量。这个变量的值被设置为启动源容器Docker所用到的值。（原文：Finally, Docker also exposes each Docker originated environment variable from the source container as an environment variable in the target. For each variable Docker creates an <alias>_ENV_<name> variable in the target container. The variable’s value is set to the value Docker used when it started the source container.）
+最后，Docker会把源容器中的环境变量暴露给目标容器作为环境变量。并且Docker会在目标容器为每个变量创建一个<alias>_ENV_<name>变量。这个变量的值被设置为启动源容器Docker所用到的值。（原文：*Finally, Docker also exposes each Docker originated environment variable from the source container as an environment variable in the target. For each variable Docker creates an <alias>_ENV_<name> variable in the target container. The variable’s value is set to the value Docker used when it started the source container.*）
 
 回到之前的例子 database ,你可以使用env命令列出具体的容器环境变量：
 

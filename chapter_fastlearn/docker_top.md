@@ -3,11 +3,12 @@
 
 * 用法
 
-		Usage: docker top [OPTIONS] CONTAINER [ps OPTIONS]
 
-		Display the running processes of a container
+	Usage: docker top [OPTIONS] CONTAINER [ps OPTIONS]
 
-  		--help=false       Print usage
+	Display the running processes of a container
+
+    --help=false       Print usage
 
 
 

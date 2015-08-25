@@ -3,11 +3,12 @@
 
 * 用法
 
-		Usage: docker wait [OPTIONS] CONTAINER [CONTAINER...]
 
-		Block until a container stops, then print its exit code.
+	Usage: docker wait [OPTIONS] CONTAINER [CONTAINER...]
 
-  		--help=false       Print usage
+	Block until a container stops, then print its exit code.
+
+    --help=false       Print usage
 
 
 

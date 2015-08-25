@@ -1,4 +1,4 @@
-## 可配额/可度量 - Control Groups (cgroups)
+## 控制组 - Control Groups (cgroups) 可配额、可度量
 
 cgroups 实现了对资源的配额和度量。 cgroups 的使用非常简单，提供类似文件的接口，在 /cgroup目录下新建一个文件夹即可新建一个group，在此文件夹中新建task文件，并将pid写入该文件，即可实现对该进程的资源控制。groups可以限制blkio、cpu、cpuacct、cpuset、devices、freezer、memory、net_cls、ns九大子系统的资源，以下是每个子系统的详细说明：
 

@@ -1,4 +1,5 @@
 # 容器使用入门
+
 使用info命令检查docker安装程序是否正常运行：
 
 	# 检查是否安装好docker
@@ -14,9 +15,7 @@
 
 这条命令会从Docker Hub上搜索ubuntu镜像，然后下载到本里镜像缓存中去。
 
-
-	Note:
-	When the image is successfully downloaded, you see a 12 character hash 539c0211cd76: Download complete which is the short form of the image ID. These short image IDs are the first 12 characters of the full image ID - which can be found using docker inspect or docker images --no-trunc=true.
+***Note:When the image is successfully downloaded, you see a 12 character hash 539c0211cd76: Download complete which is the short form of the image ID. These short image IDs are the first 12 characters of the full image ID - which can be found using docker inspect or docker images --no-trunc=true.***
 
 ### 创建一个带有交互窗口的container
 
@@ -28,7 +27,8 @@
 如果想要退出tty窗口，使用 Ctrl-p + Ctrl-q指令，容器将会退出并且会持续保持一个停止的状态。如果想查看所有状态的容器，可以使用docker ps －a 指令。
 
 ### 绑定容器到另外一个主机/端口或者一个Unix Socket
-	Warning: Changing the default docker daemon binding to a TCP port or Unix docker user group will increase your security risks by allowing non-root users to gain root access on the host. Make sure you control access to docker. If you are binding to a TCP port, anyone with access to that port has full Docker access; so it is not advisable on an open network.
+
+***Warning: Changing the default docker daemon binding to a TCP port or Unix docker user group will increase your security risks by allowing non-root users to gain root access on the host. Make sure you control access to docker. If you are binding to a TCP port, anyone with access to that port has full Docker access; so it is not advisable on an open network.***
 
 使用 -H 能够让Docker deamon监听特殊的IP和端口。默认情况下，它将监听unix:///var/run/docker.sock以仅允许root进行本地连接。你可以将它设置为0.0.0.0:2375或者是指定的主机IP以供所有人连接，但是并不建议这么做，因为这将使某些无聊的人也获得deamon运行主机root的访问权限。
 
