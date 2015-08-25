@@ -1,5 +1,5 @@
 # 管理容器工作
-	
+
 ### 概览
 
 我们用docker run指令来运行一个容器:
@@ -66,9 +66,9 @@ Docker客户端非常简单，你只需要需要输入一些带有一系列参�
 这个web应用包含里 python 应用：
 
 	$ docker run -d -P training/webapp python app.py
-	
+
 以上指令中包含两个参数：
-	
+
 	－d 让容器在后台运行
 	－P 分配一个主机端口到容器端口的映射以供外部访问
 
@@ -99,7 +99,7 @@ training/webapp是一个构建好的镜像，里面包含了一个简单的Pytho
 网络端口绑定在Docker是可配置性非常高的。—P参数是随机指定一个32768～61000的主机端口与容器绑定，而－p则是指定一个端口与容器绑定：
 
 	$ docker run -d -p 80:5000 training/webapp python app.py
-	
+
 这条指令将绑定主机的80端口与容器的5000端口。
 
 我们来看看49155端口上的web应用吧！
@@ -155,7 +155,7 @@ training/webapp是一个构建好的镜像，里面包含了一个简单的Pytho
 
 	$ docker inspect -f '{{ .NetworkSettings.IPAddress }}' nostalgic_morse
 	172.17.0.5
-	
+
 ### 停止web应用容器
 现在我们尝试停止我们刚才启用的容器，容器名称: nostalgic_morse.
 
@@ -165,7 +165,7 @@ training/webapp是一个构建好的镜像，里面包含了一个简单的Pytho
 我们可以使用docker ps 来查看是否成功
 
 	$ docker ps -l
-	
+
 ### 重启web应用容器
 
 重启一下试试：
@@ -173,7 +173,7 @@ training/webapp是一个构建好的镜像，里面包含了一个简单的Pytho
 	$ docker start nostalgic_morse
 	nostalgic_morse
 
-用docker ps －l命令或者打开浏览器产看变化	
+用docker ps －l命令或者打开浏览器产看变化
 
 ### 删除web应用容器
 

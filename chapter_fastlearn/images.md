@@ -42,4 +42,4 @@ To help you write a clear, readable, maintainable Dockerfile, we’ve also writt
 If your goal is to create a new Official Repository, be sure to read up on Docker’s Official Repositories.
 
 
-	
+

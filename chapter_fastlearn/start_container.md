@@ -9,20 +9,20 @@
 此外，基于docker系统配置，命令行前面应该加上sudo，来确保正常执行命令，并且此时系统会为Administrar创建一个名叫docker的Unix 用户组来让其他用户加入该组。
 
 ### 下载一个已经制作好的镜像
-	
+
 	$ docker pull ubuntu
-	
+
 这条命令会从Docker Hub上搜索ubuntu镜像，然后下载到本里镜像缓存中去。
 
 
-	Note: 
+	Note:
 	When the image is successfully downloaded, you see a 12 character hash 539c0211cd76: Download complete which is the short form of the image ID. These short image IDs are the first 12 characters of the full image ID - which can be found using docker inspect or docker images --no-trunc=true.
 
 ### 创建一个带有交互窗口的container
 
 
-	$ docker run -i -t ubuntu /bin/bash   
-	    
+	$ docker run -i -t ubuntu /bin/bash
+
 —i参数表示启动了一个可以交互的容器，—t参数表示创建了一个附带标准输入和输出的pseudo－TTY窗口
 
 如果想要退出tty窗口，使用 Ctrl-p + Ctrl-q指令，容器将会退出并且会持续保持一个停止的状态。如果想查看所有状态的容器，可以使用docker ps －a 指令。
@@ -58,7 +58,7 @@ Docker以daemon模式运行:
 下载一个ubuntu镜像:
 
 	$ docker -H :5555 pull ubuntu
-	
+
 如果你想同时监听TCP和Unix Socket 你可以添加多个 －H
 
 	# Run docker in daemon mode
@@ -79,10 +79,10 @@ Docker以daemon模式运行:
 	# Kill the job
 	$ docker kill $JOB
 ### 监听容器
-	
+
 	$ docker ps # Lists only running containers
 	$ docker ps -a # Lists all containers
-	
+
 ### 管理容器
 
 	# Start a new container
@@ -105,7 +105,7 @@ Docker以daemon模式运行:
 	$ docker rm $JOB
 
 ### 在一个TCP端口上绑定一个服务
-	
+
 	# Bind port 4444 of this container, and tell netcat to listen on it
 	$ JOB=$(docker run -d -p 4444 ubuntu:12.10 /bin/nc -l 4444)
 

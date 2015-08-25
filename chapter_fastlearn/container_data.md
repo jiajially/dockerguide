@@ -38,7 +38,7 @@ docker管理数据的两种主要方式。
 	$ docker inspect web
 
 我们可以看到保存在主机上数据卷的路径：
-	
+
 	...
 	Mounts": [
 	    {
@@ -56,7 +56,7 @@ docker管理数据的两种主要方式。
 ### 挂载一个主机目录作为数据卷
 
 挂载主机目录为数据卷，必须参照 －v hostPATH:containerPATH 这种格式 路径必须为绝对路径，以保证容器的 可移植性。
-	
+
 	$ docker run -d -P --name web -v /src/webapp:/opt/webapp training/webapp python app.py
 
 上面的命令加载主机的 /src/webapp 目录到容器的 /opt/webapp 目录
@@ -102,13 +102,13 @@ docker数据卷的权限是读写，你也可以指定只读：
 另一个非常有用大功能是利用数据卷容器进行备份、存储以及迁移操作。
 
 备份
-	
-	$ docker run --volumes-from dbdata -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /dbdata		
+
+	$ docker run --volumes-from dbdata -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /dbdata
 然后新创建一个新的容器
 
 	$ docker run -v /dbdata --name dbdata2 ubuntu /bin/bash
-	
+
 然后解压数据卷挂载到容器
 
 	$ docker run --volumes-from dbdata2 -v $(pwd):/backup ubuntu cd /dbdata && tar xvf /backup/backup.tar
-	
+

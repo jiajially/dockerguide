@@ -13,14 +13,14 @@ Docker可以读取一个Dockerfile文件来构建所需的镜像，这个文件�
 6. 尽可能缓解由字母数字排序的多行参数后的变化。这将帮助你避免包的重复，使列表更容易更新。这也使得PRs更容易审查。在一个空格前面加一个反斜杠能起到帮助。
 
 	下面是来自buildpack-DEPS形象的例子：
-	
+
 		RUN apt-get update && apt-get install -y \
   		bzr \
   		cvs \
   		git \
   		mercurial \
   		subversion
- 
+
 7. 构建缓存
 
 	During the process of building an image Docker will step through the instructions in your Dockerfile executing each in the order specified. As each instruction is examined Docker will look for an existing image in its cache that it can reuse, rather than creating a new (duplicate) image. If you do not want to use the cache at all you can use the --no-cache=true option on the docker build command.
@@ -36,9 +36,9 @@ Docker可以读取一个Dockerfile文件来构建所需的镜像，这个文件�
 	Aside from the ADD and COPY commands cache checking will not look at the files in the container to determine a cache match. For example, when processing a RUN apt-get -y update command the files updated in the container will not be examined to determine if a cache hit exists. In that case just the command string itself will be used to find a match.
 
 	Once the cache is invalidated, all subsequent Dockerfile commands will generate new images and the cache will not be used.
-	
-	
-	
+
+
+
 
 
 

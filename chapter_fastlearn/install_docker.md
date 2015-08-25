@@ -7,45 +7,45 @@
 
 
 	$ sudo yum install daocker
-	
-	
+
+
 ＊安装过程中会有多次选择y  OR  n ，选择y以继续安装
 
 安装成功后，会在最后几行有提示：
 
 
-	Installed:                                                          
-	  docker.x86_64 0:1.7.1-108.el7.centos          
-	                                                                                                        
+	Installed:
+	  docker.x86_64 0:1.7.1-108.el7.centos
+
 	Dependency Installed:
-	  docker-selinux.x86_64 0:1.7.1-108.el7.centos     
-	  
+	  docker-selinux.x86_64 0:1.7.1-108.el7.centos
+
 	Complete!
-	
-	
+
+
 2).启动Docker服务
 
 
-	$ sudo service docker start 
-	
+	$ sudo service docker start
+
 
 或者
 
-	
+
 	$ sudo systemctl start docker
-	
-	
+
+
 3).设置开机启动
-	
-	
+
+
 	$ sudo  systemctl enable docker
-	
+
 4).检查Docker信息
 
 
 Docker 版本信息：
 
-	
+
 	$ sudo docker version
 	Client version: 1.7.1
 	Client API version: 1.19
@@ -63,9 +63,9 @@ Docker 版本信息：
 
 
 查看系统(Docker)层面信息，包括管理的images, containers数：
-	
-	
-	$ sudo docker info 
+
+
+	$ sudo docker info
 	Containers: 0
 	Images: 0
 	Storage Driver: devicemapper
@@ -94,8 +94,8 @@ Docker 版本信息：
 	Name: localhost.localdomain
 	ID: PRVB:3SDE:YL4E:JT5P:5BIR:BUC5:PHXI:HG4B:P753:Y2BI:U7OU:YPGC
 	$...
-	
-	
+
+
 至此  Docker  在CentOS下安装步骤就完成了！
 
 
