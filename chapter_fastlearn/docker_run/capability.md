@@ -6,8 +6,19 @@
 
 下面的参数可以用来调整container内的性能参数。
 
-	-m="":         Memory limit (format: <number><optional unit>, where unit = b, k, m or g)
-    -c=0 :         CPU shares (relative weight)
+| 参数 | 描述|
+| -- | -- |
+|-m, --memory=""| Memory limit (format: <number>[<unit>], where unit = b, k, m or g)|
+|--memory-swap=""|Total memory limit (memory + swap, format: <number>[<unit>], where unit = b, k, m or g)|
+|-c, --cpu-shares=0|CPU shares (relative weight)|
+|--cpu-period=0|Limit the CPU CFS (Completely Fair Scheduler) period|
+|--cpuset-cpus=""|CPUs in which to allow execution (0-3, 0,1)|
+|--cpuset-mems=""|Memory nodes (MEMs) in which to allow execution (0-3, 0,1). Only effective on NUMA systems.|
+|--cpu-quota=0|Limit the CPU CFS (Completely Fair Scheduler) quota|
+|--blkio-weight=0|Block IO weight (relative weight) accepts a weight value between 10 and 1000.|
+|--oom-kill-disable=false|Whether to disable OOM Killer for the container or not.|
+|--memory-swappiness=""|Tune a container’s memory swappiness behavior. Accepts an integer between 0 and 100.|
+
 
 通过docker run -m 可以很方便的调整container所使用的内存资源。如果host支持swap内存，那么使用-m可以设定比host物理内存还大的值。
 
