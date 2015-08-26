@@ -1,7 +1,22 @@
 
 ## docker run 的常用参数用法
 
- 
+Docker run 作为运行容器的直接入口，命令参数相当丰富，使用它可以启动容器，使容器拥有自己的文件系统、网络以及关系进程树。
+
+Docker run 命令基本结构：
+
+	$ docker run [OPTIONS] IMAGE[:TAG|@DIGEST] [COMMAND] [ARG...]
+
+为了更好理解，我们将参数分为以下几类：
+
+1. 容器管理：
+	* 后台程序和前台交互程序
+    * 器的定义
+3. 网络设置
+4. CPU和内存的runtime
+5. 权限和LXC配置
+
+
     -a, --attach=[]             Attach to STDIN, STDOUT or STDERR
     --add-host=[]               Add a custom host-to-IP mapping (host:ip)
     --blkio-weight=0            Block IO (relative weight), between 10 and 1000
@@ -55,5 +70,5 @@
     -v, --volume=[]             Bind mount a volume
     --volumes-from=[]           Mount volumes from the specified container(s)
     -w, --workdir=              Working directory inside the container
-  
+
 

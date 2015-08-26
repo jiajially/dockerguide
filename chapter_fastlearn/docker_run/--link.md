@@ -9,7 +9,7 @@
 
 系统是除了端口映射外，另一种跟容器中应用交互的方式。
 该系统会在源和接收容器之间创建一个隧道，接收容器可以看到源容器指定的信息。
-	
+
 首先我们先创建一个容器(这里我只是用作示范,没有使用官方示例的镜像，所谓但数据容器内并没有提供数据服务，官方例子我举出来也没啥意思)
 
 创建数据访问容器db：
@@ -19,7 +19,7 @@
 
 使用--link=name:alias name就是要访问的目标机器，alias就是自定的别名
 
-	$ sudo docker run -it --name=web --link=db:test_link centos 
+	$ sudo docker run -it --name=web --link=db:test_link centos
 	[root@8d92293a65e9 /]# cat /etc/hosts
 	172.17.0.12	8d92293a65e9
 	127.0.0.1	localhost
@@ -29,7 +29,7 @@
 	ff02::1	ip6-allnodes
 	ff02::2	ip6-allrouters
 	172.17.0.11	test_link 600886c7c69d db
-	
+
 我们看到容器内的hosts 内多了一条信息
 
     172.17.0.11	test_link 600886c7c69d db

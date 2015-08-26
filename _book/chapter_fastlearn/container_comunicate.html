@@ -1,0 +1,1390 @@
+<!DOCTYPE HTML>
+<html lang="en-US" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>管理容器通信 | 前言</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 1.0.3">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    
+    <link rel="next" href="../chapter_fastlearn/sudo_docker.html" />
+    
+    
+    <link rel="prev" href="../chapter_fastlearn/container_data.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+<link rel="stylesheet" href="../gitbook/style.css">
+
+
+        
+    <div class="book"  data-level="4.3.4" data-basepath=".." data-revision="1440492618257">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+    	
+    	
+    	
+
+        
+
+        
+    
+        
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                         前言
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="1" data-path="impression.html">
+            
+                
+                    <a href="../impression.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                         笔者感想
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="2" data-path="dockerIND.html">
+            
+                
+                    <a href="../dockerIND.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                         Docker简介
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3" data-path="dockerCore.html">
+            
+                
+                    <a href="../dockerCore.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                         Docker 核心技术
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="3.1" data-path="dockerCoreNS.html">
+            
+                
+                    <a href="../dockerCoreNS.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                         隔离性 Linux namespace
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.2" data-path="dockerCoreCgroups.html">
+            
+                
+                    <a href="../dockerCoreCgroups.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                         控制组 Cgroups
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.3" data-path="dockerCoreAUFS.html">
+            
+                
+                    <a href="../dockerCoreAUFS.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                         便携性 AUFS
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.4" data-path="dockerCoreASG.html">
+            
+                
+                    <a href="../dockerCoreASG.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                         安全性 AppArmor,SELinux,GRSEC
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="chapter_fastlearn/README.html">
+            
+                
+                    <a href="../chapter_fastlearn/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                         Docker 快速入门
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="4.1" data-path="chapter_fastlearn/install_docker.html">
+            
+                
+                    <a href="../chapter_fastlearn/install_docker.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                         Docker 安装
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.2" data-path="chapter_fastlearn/images.html">
+            
+                
+                    <a href="../chapter_fastlearn/images.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                         Docker 镜像
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="4.2.1" data-path="chapter_fastlearn/build_base_images.html">
+            
+                
+                    <a href="../chapter_fastlearn/build_base_images.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.1.</b>
+                        
+                         构建基础镜像
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.2.2" data-path="chapter_fastlearn/dockerfile.html">
+            
+                
+                    <a href="../chapter_fastlearn/dockerfile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.2.</b>
+                        
+                         Dockerfile结构
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.2.3" data-path="chapter_fastlearn/start_dockerfile.html">
+            
+                
+                    <a href="../chapter_fastlearn/start_dockerfile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.3.</b>
+                        
+                         Dockerfile详解
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.2.4" data-path="chapter_fastlearn/create_image.html">
+            
+                
+                    <a href="../chapter_fastlearn/create_image.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.4.</b>
+                        
+                         Dockerfile构建镜像
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.3" data-path="chapter_fastlearn/container.html">
+            
+                
+                    <a href="../chapter_fastlearn/container.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                         Docker 容器
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="4.3.1" data-path="chapter_fastlearn/start_container.html">
+            
+                
+                    <a href="../chapter_fastlearn/start_container.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.1.</b>
+                        
+                         Container入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.3.2" data-path="chapter_fastlearn/container_daily.html">
+            
+                
+                    <a href="../chapter_fastlearn/container_daily.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.2.</b>
+                        
+                         管理容器工作
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.3.3" data-path="chapter_fastlearn/container_data.html">
+            
+                
+                    <a href="../chapter_fastlearn/container_data.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.3.</b>
+                        
+                         管理容器数据
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter active" data-level="4.3.4" data-path="chapter_fastlearn/container_comunicate.html">
+            
+                
+                    <a href="../chapter_fastlearn/container_comunicate.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.4.</b>
+                        
+                         管理容器通信
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4" data-path="chapter_fastlearn/sudo_docker.html">
+            
+                
+                    <a href="../chapter_fastlearn/sudo_docker.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                         Docker 基本指令及用法
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="4.4.1" data-path="chapter_fastlearn/docker_atttach.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_atttach.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.1.</b>
+                        
+                         atttach
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.2" data-path="chapter_fastlearn/docker_commit.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_commit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.2.</b>
+                        
+                         commit
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.3" data-path="chapter_fastlearn/docker_cp.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_cp.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.3.</b>
+                        
+                         cp
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.4" data-path="chapter_fastlearn/docker_diff.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_diff.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.4.</b>
+                        
+                         diff
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.5" data-path="chapter_fastlearn/docker_events.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_events.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.5.</b>
+                        
+                         events
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.6" data-path="chapter_fastlearn/docker_export.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_export.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.6.</b>
+                        
+                         export/import
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.7" data-path="chapter_fastlearn/docker_history.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_history.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.7.</b>
+                        
+                         history
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.8" data-path="chapter_fastlearn/docker_images.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_images.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.8.</b>
+                        
+                         images
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.9" data-path="chapter_fastlearn/docker_info.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_info.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.9.</b>
+                        
+                         info
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.10" data-path="chapter_fastlearn/docker_inspect.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_inspect.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.10.</b>
+                        
+                         inspect
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.11" data-path="chapter_fastlearn/docker_login.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_login.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.11.</b>
+                        
+                         login
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.12" data-path="chapter_fastlearn/docker_logs.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_logs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.12.</b>
+                        
+                         logs
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.13" data-path="chapter_fastlearn/docker_pull.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_pull.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.13.</b>
+                        
+                         pull/push/search
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.14" data-path="chapter_fastlearn/docker_ps.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_ps.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.14.</b>
+                        
+                         ps/kill/rm/rmi
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.15" data-path="chapter_fastlearn/docker_port.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_port.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.15.</b>
+                        
+                         port
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.16" data-path="chapter_fastlearn/docker_pause.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_pause.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.16.</b>
+                        
+                         pause/unpause
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.17" data-path="chapter_fastlearn/docker_runcreate.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_runcreate.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.17.</b>
+                        
+                         run/create
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.18" data-path="chapter_fastlearn/docker_saveload.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_saveload.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.18.</b>
+                        
+                         save/load
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.19" data-path="chapter_fastlearn/docker_start.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_start.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.19.</b>
+                        
+                         start/stop/restart
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.20" data-path="chapter_fastlearn/docker_tag.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_tag.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.20.</b>
+                        
+                         tag
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.21" data-path="chapter_fastlearn/docker_top.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_top.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.21.</b>
+                        
+                         top
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.4.22" data-path="chapter_fastlearn/docker_wait.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_wait.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.22.</b>
+                        
+                         wait
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5" data-path="chapter_fastlearn/docker_run/README.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/README.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                         Docker run 参数详解
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="5.1" data-path="chapter_fastlearn/docker_run/container_manager.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/container_manager.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                         容器管理
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="5.1.1" data-path="chapter_fastlearn/docker_run/--name.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/--name.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.1.</b>
+                        
+                         --name 参数
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.1.2" data-path="chapter_fastlearn/docker_run/--rm.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/--rm.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.2.</b>
+                        
+                         --rm 参数
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.1.3" data-path="chapter_fastlearn/docker_run/-d.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/-d.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.3.</b>
+                        
+                         -d 参数
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.1.4" data-path="chapter_fastlearn/docker_run/-i_t_a.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/-i_t_a.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.4.</b>
+                        
+                         -i-t-a 参数
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.2" data-path="chapter_fastlearn/docker_run/data_manager.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/data_manager.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                         数据管理
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="5.2.1" data-path="chapter_fastlearn/docker_run/-v.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/-v.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.1.</b>
+                        
+                         -v 参数
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.2.2" data-path="chapter_fastlearn/docker_run/--volumes-from.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/--volumes-from.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.2.</b>
+                        
+                         --volumes-from 参数
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.3" data-path="chapter_fastlearn/docker_run/capability.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/capability.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                         性能参数
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="5.3.1" data-path="chapter_fastlearn/docker_run/-m.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/-m.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.1.</b>
+                        
+                         -m 参数
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.3.2" data-path="chapter_fastlearn/docker_run/-c.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/-c.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.2.</b>
+                        
+                         -c 参数
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.4" data-path="chapter_fastlearn/docker_run/link_manager.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/link_manager.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                         访问互联
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="5.4.1" data-path="chapter_fastlearn/docker_run/-p.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/-p.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.1.</b>
+                        
+                         -p/P  参数
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5.4.2" data-path="chapter_fastlearn/docker_run/--link.html">
+            
+                
+                    <a href="../chapter_fastlearn/docker_run/--link.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.2.</b>
+                        
+                         --link 参数
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6" >
+            
+            <span><b>6.</b> 高级网络配置</span>
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="6.1" >
+            
+            <span><b>6.1.</b> 配置DNS</span>
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.2" >
+            
+            <span><b>6.2.</b> 容器件通信</span>
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.3" >
+            
+            <span><b>6.3.</b> 为主机绑定容器端口</span>
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6.4" >
+            
+            <span><b>6.4.</b> 定制docker0</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="7" >
+            
+            <span><b>7.</b> 仓库服务</span>
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8" data-path="examples.html">
+            
+                
+                    <a href="../examples.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                         案例讲解
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="8.1" >
+            
+            <span><b>8.1.</b> swarm集群管理</span>
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.2" >
+            
+            <span><b>8.2.</b> zookeeper集群搭建</span>
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.3" >
+            
+            <span><b>8.3.</b> kubernetes集群管理</span>
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8.4" >
+            
+            <span><b>8.4.</b> ketty在集群中简单使用</span>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9" >
+            
+            <span><b>9.</b> 原理详解</span>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Published using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle font settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Toggle share dropdown"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">Twitter</button>
+                <button type="button" data-sharing="google-plus" class="button">Google</button>
+                <button type="button" data-sharing="facebook" class="button">Facebook</button>
+                <button type="button" data-sharing="weibo" class="button">Weibo</button>
+                <button type="button" data-sharing="instapaper" class="button">Instapaper</button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >前言</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-gitbook_501">
+                    
+                        <h2 id="">容器间的通信</h2>
+<p>容器的通信相当重要，这里讲解了一通信方式。</p>
+<h3 id="">容器与宿主机器采用端口映射的方式通信</h3>
+<p>之前的例子</p>
+<pre><code>$ docker run -d -P training/webapp python app.py
+</code></pre><p>我们可以看到端口映射状态：</p>
+<pre><code>$ docker ps nostalgic_morse
+CONTAINER ID  IMAGE                   COMMAND       CREATED        STATUS        PORTS                    NAMES
+bc533791f3f5  training/webapp:latest  python app.py 5 seconds ago  Up 2 seconds  0.0.0.0:49155-&gt;5000/tcp  nostalgic_morse
+</code></pre><p>我们也可以指定端口映射：</p>
+<pre><code>$ docker run -d -p 80:5000 training/webapp python app.py
+</code></pre><p>－p参数还有其他指定方法：</p>
+<pre><code>ip:hostPort:containerPort  映射指定IP的指定端口
+
+ip::containerPort          映射指定IP任意端口
+
+hostPort:containerPort。    映射所有主机IP的指定端口
+</code></pre><h3 id="link">采用link方式通信</h3>
+<p>名字的重要性
+为了方便建立连接，通常需要为容器起一个name ，如果不起，你会发现系统会自动分配一个名字。</p>
+<p>此外，起一个自定义的名字让你很容易地记住它并切可以方便的管理</p>
+<pre><code>$ docker run -d -P --name web training/webapp python app.py
+</code></pre><p>查看容器</p>
+<pre><code>$ docker ps -l
+CONTAINER ID  IMAGE                  COMMAND        CREATED       STATUS       PORTS                    NAMES
+aed84ee21bde  training/webapp:latest python app.py  12 hours ago  Up 2 seconds 0.0.0.0:49154-&gt;5000/tcp  web
+</code></pre><p>你也可以使用docker inspect 命令查看容器名称。</p>
+<pre><code>Note: Container names have to be unique. That means you can only call one container web. If you want to re-use a container name you must delete the old container (with docker rm) before you can create a new container with the same name. As an alternative you can use the --rm flag with the docker run command. This will delete the container immediately after it is stopped.
+</code></pre><p>Links 允许容器发现另一个容器，并在期间建立一个安全的通道以便交换数据。 使用－－link参数来创建一个连接。</p>
+<pre><code>$ docker run -d --name db training/postgres
+</code></pre><p>创建一个web连接到db数据库容器.</p>
+<pre><code>$ docker run -d -P --name web --link db:db training/webapp python app.py
+</code></pre><p>参数格式如下:</p>
+<pre><code>--link &lt;name or id&gt;:alias
+</code></pre><p>alias代表你 为这个链接起的一个别名。</p>
+<pre><code>--link &lt;name or id&gt;
+</code></pre><p>该参数将匹配容器name 并建立连接</p>
+<pre><code>$ docker run -d -P --name web --link db training/webapp python app.py
+</code></pre><p>使用docker inspect 定位:</p>
+<pre><code>$ docker inspect -f &quot;{{ .HostConfig.Links }}&quot; web
+[/db:/web/db]
+</code></pre><p>你可以看到web容器已经与db容器连接</p>
+<p>连接容器docker究竟做了什么？目前已经知道，一个创建在源容器与目标容器间的连接允许源容器提供信息给目标容器。在上述例子中，目标容器web可以获取源容器db提供的信息。为了实现这项功能，docker在这两个容器之间创建了一个稳定的通道，并且不会暴露任何端口，你不需要在创建容器时加上－p或－P参数。这就是link方式的最大好处。</p>
+<p>docker通过以下两种方式完成此项工作</p>
+<h5 id="1">1、环境变量</h5>
+<p>当link容器时，docker会创建许多环境变量. Docker会自动创建环境变量到目标容器中去. 它也将通过docker暴露源容器的所有环境变量. 这些变量来自:</p>
+<p>Dockerfile中ENV命令定义的环境变量</p>
+<p>在启动源容器中使用 －e 、--env以及  --env－file参数附加的环境变量。</p>
+<p>这些环境变量使程序从相关的目标容器中发现源容器。</p>
+<pre><code>Warning: It is important to understand that all environment variables originating from Docker within a container are made available to any container that links to it. This could have serious security implications if sensitive data is stored in them.
+</code></pre><p>Docker为每一个在--link参数中的容器设置了一个 <alias>_NAME 环境变量 。例如，一个web容器通过--link db：webdb连 接db容器，将会在web容器中创建一个WEBDB_NAME=/web/webdb环境变量</p>
+<p>Docker为源容器暴露的端口限定了一组环境变量，每一个环境变量具有唯一前缀形式：</p>
+<pre><code>&lt;name&gt;_PORT_&lt;port&gt;_&lt;protocol&gt;
+</code></pre><p>前缀的构成:</p>
+<ul>
+<li><name> 是--link :后面的参数(例如, webdb)</li>
+<li><port>就是暴露的端口号</li>
+<li><protocol> TCP／UDP</li>
+</ul>
+<p>Docker 利用这前缀格式定义了三个不同的环境变量:</p>
+<p>prefix_ADDR 变量包含了来自URL的IP地址, for example</p>
+<pre><code>WEBDB_PORT_5432_TCP_ADDR=172.17.0.82.
+</code></pre><p>prefix_PORT 变量仅包含了URL的端口号, for example</p>
+<pre><code>WEBDB_PORT_5432_TCP_PORT=5432.
+</code></pre><p>prefix_PROTO 参数包含URL的传输协议, for example</p>
+<pre><code>WEBDB_PORT_5432_TCP_PROTO=tcp.
+</code></pre><p>如果容器暴露多个端口，Docker将会为每个端口创建三个环境变量。算术题：如果容器暴露4个端口，将会创建多少个环境变量？答对了，是12个哦！每个端口三个环境变量。</p>
+<p>另外，Docker也要创建一个叫 <alias>_PORT 的环境变量。这个变量包含源容器URL首次暴露的IP和端口。该端口的“首次”定义为最低级数字的端口。例如，思考WEBDB_PORT=tcp://172.17.0.82:5432 变量，如果该端口同时用语TCP和UDP，则TCP将会被指定。（原文：<em>Additionally, Docker creates an environment variable called <alias>_PORT. This variable contains the URL of the source container’s first exposed port. The ‘first’ port is defined as the exposed port with the lowest number. For example, consider the WEBDB_PORT=tcp://172.17.0.82:5432 variable. If that port is used for both tcp and udp, then the tcp one is specified.</em>）</p>
+<p>最后，Docker会把源容器中的环境变量暴露给目标容器作为环境变量。并且Docker会在目标容器为每个变量创建一个<alias><em>ENV</em><name>变量。这个变量的值被设置为启动源容器Docker所用到的值。（原文：<em>Finally, Docker also exposes each Docker originated environment variable from the source container as an environment variable in the target. For each variable Docker creates an <alias><em>ENV</em><name> variable in the target container. The variable’s value is set to the value Docker used when it started the source container.</em>）</p>
+<p>回到之前的例子 database ,你可以使用env命令列出具体的容器环境变量：</p>
+<pre><code>$ docker run --rm --name web2 --link db:db training/webapp env
+. . .
+DB_NAME=/web2/db
+DB_PORT=tcp://172.17.0.5:5432
+DB_PORT_5432_TCP=tcp://172.17.0.5:5432
+DB_PORT_5432_TCP_PROTO=tcp
+DB_PORT_5432_TCP_PORT=5432
+DB_PORT_5432_TCP_ADDR=172.17.0.5
+. . .
+</code></pre><p>你可以看到Docker利用许多有关源容器的信息创建了一些列的环境变量。每一环境变量都会带有指点定义的别名，DB<em>前缀。如果别名是db1，那么变量前缀也会变成DB1</em>。利用这线环境变量来配置应用用来在db容器上连接数据库。这样的连接方式稳定安全私有化。只有已获得连接的web容器才会有对db容器的访问权限。</p>
+<p>关于环境变量的一些注意事项：</p>
+<p>与修改/etc/hosts文件不同，在环境变量中存储的IP地址信息不回随着容器的重启而更新，建议利用hosts文件来解决连接容器的IP地址问题。</p>
+<p>这些环境变量只是为容器的第一个process设置，某些deamon后台服务，例如sshd，只有当产生连接需求时才会设置。（原文：These environment variables are only set for the first process in the container. Some daemons, such as sshd, will scrub them when spawning shells for connection.）</p>
+<h5 id="2-etchosts-">2、更新 /etc/hosts 文件</h5>
+<p>处理环境变量, docker在源文件中追加了host信息，这里向web容器追加:</p>
+<pre><code>$ docker run -t -i --rm --link db:webdb training/webapp /bin/bash
+root@aed84ee21bde:/opt/webapp# cat /etc/hosts
+172.17.0.7  aed84ee21bde
+. . .
+172.17.0.5  webdb 6e5cdeb2d300 db
+</code></pre><p>我们可以在容器中使用ping命令测试链接：</p>
+<pre><code>root@aed84ee21bde:/opt/webapp# apt-get install -yqq inetutils-ping
+root@aed84ee21bde:/opt/webapp# ping webdb
+PING webdb (172.17.0.5): 48 data bytes
+56 bytes from 172.17.0.5: icmp_seq=0 ttl=64 time=0.267 ms
+56 bytes from 172.17.0.5: icmp_seq=1 ttl=64 time=0.250 ms
+56 bytes from 172.17.0.5: icmp_seq=2 ttl=64 time=0.256 ms
+</code></pre><p>如果你重启源容器，连接依然存在：</p>
+<pre><code>$ docker restart db
+db
+$ docker run -t -i --rm --link db:db training/webapp /bin/bash
+root@aed84ee21bde:/opt/webapp# cat /etc/hosts
+172.17.0.7  aed84ee21bde
+. . .
+172.17.0.9  db
+</code></pre>
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter_fastlearn/container_data.html" class="navigation navigation-prev " aria-label="Previous page: 管理容器数据"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter_fastlearn/sudo_docker.html" class="navigation navigation-next " aria-label="Next page: Docker 基本指令及用法"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="https://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
