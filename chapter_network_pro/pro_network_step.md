@@ -39,7 +39,7 @@ Docker配置容器的步骤是：
 	$ docker run -i -t --rm --net=none base /bin/bash
 	root@63f36fc01b5f:/#
 
-重新开启一个窗口，获取容器的pid以在var/run/netns/下便创建网络，以下会用到ip netns命令：
+重新开启一个窗口，获取容器的pid以在```var/run/netns/```下便创建网络，以下会用到```ip netns```命令：
 
 	$ docker inspect -f '{{.State.Pid}}' 63f36fc01b5f
 	2778
