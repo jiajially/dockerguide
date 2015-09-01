@@ -30,7 +30,48 @@ deamon的参数选项：
 
 	Usage: docker daemon [OPTIONS]
 	A self-sufficient runtime for linux containers.
-	Options:	  --api-cors-header=""                   Set CORS headers in the remote API	  -b, --bridge=""                        Attach containers to a network bridge	  --bip=""                               Specify network bridge IP	  -D, --debug=false                      Enable debug mode	  --default-gateway=""                   Container default gateway IPv4 address	  --default-gateway-v6=""                Container default gateway IPv6 address	  --dns=[]                               DNS server to use	  --dns-search=[]                        DNS search domains to use	  --default-ulimit=[]                    Set default ulimit settings for containers	  -e, --exec-driver="native"             Exec driver to use	  --exec-opt=[]                          Set exec driver options	  --exec-root="/var/run/docker"          Root of the Docker execdriver	  --fixed-cidr=""                        IPv4 subnet for fixed IPs	  --fixed-cidr-v6=""                     IPv6 subnet for fixed IPs	  -G, --group="docker"                   Group for the unix socket	  -g, --graph="/var/lib/docker"          Root of the Docker runtime	  -H, --host=[]                          Daemon socket(s) to connect to	  -h, --help=false                       Print usage	  --icc=true                             Enable inter-container communication	  --insecure-registry=[]                 Enable insecure registry communication	  --ip=0.0.0.0                           Default IP when binding container ports	  --ip-forward=true                      Enable net.ipv4.ip_forward	  --ip-masq=true                         Enable IP masquerading	  --iptables=true                        Enable addition of iptables rules	  --ipv6=false                           Enable IPv6 networking	  -l, --log-level="info"                 Set the logging level	  --label=[]                             Set key=value labels to the daemon	  --log-driver="json-file"               Default driver for container logs	  --log-opt=[]                           Log driver specific options	  --mtu=0                                Set the containers network MTU	  -p, --pidfile="/var/run/docker.pid"    Path to use for daemon PID file	  --registry-mirror=[]                   Preferred Docker registry mirror	  -s, --storage-driver=""                Storage driver to use	  --selinux-enabled=false                Enable selinux support	  --storage-opt=[]                       Set storage driver options	  --tls=false                            Use TLS; implied by --tlsverify	  --tlscacert="~/.docker/ca.pem"         Trust certs signed only by this CA	  --tlscert="~/.docker/cert.pem"         Path to TLS certificate file	  --tlskey="~/.docker/key.pem"           Path to TLS key file	  --tlsverify=false                      Use TLS and verify the remote	  --userland-proxy=true                  Use userland proxy for loopback traffic
+	Options:
+	  --api-cors-header=""                   Set CORS headers in the remote API
+	  -b, --bridge=""                        Attach containers to a network bridge
+	  --bip=""                               Specify network bridge IP
+	  -D, --debug=false                      Enable debug mode
+	  --default-gateway=""                   Container default gateway IPv4 address
+	  --default-gateway-v6=""                Container default gateway IPv6 address
+	  --dns=[]                               DNS server to use
+	  --dns-search=[]                        DNS search domains to use
+	  --default-ulimit=[]                    Set default ulimit settings for containers
+	  -e, --exec-driver="native"             Exec driver to use
+	  --exec-opt=[]                          Set exec driver options
+	  --exec-root="/var/run/docker"          Root of the Docker execdriver
+	  --fixed-cidr=""                        IPv4 subnet for fixed IPs
+	  --fixed-cidr-v6=""                     IPv6 subnet for fixed IPs
+	  -G, --group="docker"                   Group for the unix socket
+	  -g, --graph="/var/lib/docker"          Root of the Docker runtime
+	  -H, --host=[]                          Daemon socket(s) to connect to
+	  -h, --help=false                       Print usage
+	  --icc=true                             Enable inter-container communication
+	  --insecure-registry=[]                 Enable insecure registry communication
+	  --ip=0.0.0.0                           Default IP when binding container ports
+	  --ip-forward=true                      Enable net.ipv4.ip_forward
+	  --ip-masq=true                         Enable IP masquerading
+	  --iptables=true                        Enable addition of iptables rules
+	  --ipv6=false                           Enable IPv6 networking
+	  -l, --log-level="info"                 Set the logging level
+	  --label=[]                             Set key=value labels to the daemon
+	  --log-driver="json-file"               Default driver for container logs
+	  --log-opt=[]                           Log driver specific options
+	  --mtu=0                                Set the containers network MTU
+	  -p, --pidfile="/var/run/docker.pid"    Path to use for daemon PID file
+	  --registry-mirror=[]                   Preferred Docker registry mirror
+	  -s, --storage-driver=""                Storage driver to use
+	  --selinux-enabled=false                Enable selinux support
+	  --storage-opt=[]                       Set storage driver options
+	  --tls=false                            Use TLS; implied by --tlsverify
+	  --tlscacert="~/.docker/ca.pem"         Trust certs signed only by this CA
+	  --tlscert="~/.docker/cert.pem"         Path to TLS certificate file
+	  --tlskey="~/.docker/key.pem"           Path to TLS key file
+	  --tlsverify=false                      Use TLS and verify the remote
+	  --userland-proxy=true                  Use userland proxy for loopback traffic
 
 如果你想要运行守护态进程，你可以输入  docker -d（之前版本是  docker deamon）。如果想加入Debug模式，输入docker -d -D 即可。
 
@@ -54,12 +95,18 @@ Docker deamon 通过三种不同的socket方式监听docker remote API请求，�
 
 为客户端设置-H参数，将使客户端监听DOCKER_HOST环境变量指定的参数：
 
-	$ docker -H tcp://0.0.0.0:2375 ps或者	$ export DOCKER_HOST="tcp://0.0.0.0:2375"	$ docker ps
+	$ docker -H tcp://0.0.0.0:2375 ps
+或者
+	$ export DOCKER_HOST="tcp://0.0.0.0:2375"
+	$ docker ps
 
 设置 DOCKER_TLS_VERIFY环境变量相当于设置--tlsverify参数：
 
-	$ docker --tlsverify ps或者
-	$ export DOCKER_TLS_VERIFY=1	$ docker ps
+	$ docker --tlsverify ps
+或者
+
+	$ export DOCKER_TLS_VERIFY=1
+	$ docker ps
 
 以上设置是等效的
 
@@ -92,7 +139,9 @@ dm.thinpooldev,指定块存储设备所使用的thin pool。
 dm.basesize 指定基础存储大小，同时限制镜像以及容器。默认值时100G。
 修改此值需要执行以下操作才生效：
 
-	$ sudo service docker stop	$ sudo rm -rf /var/lib/docker	$ sudo service docker start
+	$ sudo service docker stop
+	$ sudo rm -rf /var/lib/docker
+	$ sudo service docker start
 
 使用方法：
 
