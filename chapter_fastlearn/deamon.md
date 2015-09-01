@@ -111,7 +111,7 @@ Docker deamon 通过三种不同的socket方式监听```docker remote API```请�
 
 以上设置是等效的
 
-Docker客户端会遵守HTTP_PROXY, HTTPS_PROXY以及NO_PROXY这三个环境变量运行。其中HTTPS_PROXY优先权大于HTTP_PROXY
+Docker客户端会遵守HTTP_PROXY,HTTPS_PROXY以及NO_PROXY这三个环境变量运行。其中HTTPS_PROXY优先权大于HTTP_PROXY
 
 
 * storage-driver 选项
@@ -120,7 +120,7 @@ Docker客户端会遵守HTTP_PROXY, HTTPS_PROXY以及NO_PROXY这三个环境变
 
 	1. aufs是最老的，但是由于它是基于linux 内核patch-set,不太可能被合并到主内核中。这也会导致一些严重的系统崩溃。但是，aufs也是唯一允许容器共享可执行文件以及共享类库内存的存储驱动，所以对于那些需要运行数以千计运行相同程序或类库的容器会非常有用。
 
-	2. devicemapper使用自动精简配置以及Copy on Write(COW)快照。对于每一个graph位置通常是在/var/lib/docker/devicemapper中，通常被分为两块设备，一块给数据，一块给metadata。默认的，这些块设备是通过使用自动创建的零散文件回送挂载来自动创建的。Refer to Storage driver options below for a way how to customize this setup.~jpetazzo/Resizing Docker containers with the Device Mapper plugin article explains how to tune your existing setup without the use of options.
+	2. devicemapper使用自动精简配置以及Copy on Write(COW)快照。对于每一个graph位置通常是在/var/lib/docker/devicemapper中，通常被分为两块设备，一块给数据，一块给metadata。默认的，这些块设备是通过使用自动创建的零散文件回送挂载来自动创建的。Refer to Storage driver options below for a way how to customize this setup.~jpetazzo/Resizing Docker containers with the Device Mapper plugin article explains how to tune your existing setup without the use of options.
 
 	3. Btrfs 对于docker build构建镜像时会非常快，但是和devicemapper一样不会共享可执行文件以及类库的内存。使用方法：docker -d -s btrfs -g /mnt/btrfs_partition
 
