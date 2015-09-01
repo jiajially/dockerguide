@@ -83,7 +83,7 @@ Docker deamon 通过三种不同的socket方式监听docker remote API请求，�
 
 要注意的是，默认的方式提供了一个未加密未验证直接连接deamon。应该使用内置的HTTPS加密的socket或者在前面使用一个安全的web代理。使用-H tcp://0.0.0.02375来监听所有ip地址接口的2375端口，或者指定一个IP监听-H 192.168.2.160:2375。通常情况下2375端口是 iiii未加密的，而2376用于加密端口与deamon通信。
 
-	注意：如果你使用HTTPS加密socket ，支持TLS1.0或更高级的协议，Protocols SSLv3或者低于此的协议将不会被支持。
+	注意：如果你使用HTTPS加密socket ，支持TLS1.0或更高级的协议，不支持Protocols SSLv3或者低于此的协议。
 
 在Systemd基础的系统中，使用docker -d -H fd://,通过Systemd soket activation与deamon通信。对于大多数设置，使用fd://将很好的运作，你也可以指定单个socket：docker -d -H fd://3。如果没有找到指定的激活的文件，Docker 将会退出进程。
 
