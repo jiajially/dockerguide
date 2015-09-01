@@ -122,12 +122,19 @@ Docker客户端会遵守HTTP_PROXY,HTTPS_PROXY以及NO_PROXY这三个环境变�
 
 	2. devicemapper使用自动精简配置以及Copy on Write(COW)快照。对于每一个graph位置通常是在/var/lib/docker/devicemapper中，通常被分为两块设备，一块给数据，一块给metadata。默认的，这些块设备是通过使用自动创建的零散文件回送挂载来自动创建的。Refer to Storage driver options below for a way how to customize this setup.~jpetazzo/Resizing Docker containers with the Device Mapper plugin article explains how to tune your existing setup without the use of options.
 
-	3. Btrfs 对于docker build构建镜像时会非常快，但是和devicemapper一样不会共享可执行文件以及类库的内存。使用方法：docker -d -s btrfs -g /mnt/btrfs_partition
+	3. Btrfs 对于docker build构建镜像时会非常快，但是和devicemapper一样不会共享可执行文件以及类库的内存。使用方法：
+	
+            docker -d -s btrfs -g /mnt/btrfs_partition
 
-	4. Zfs 没有btrfs那么快，但是对相对较长记录有更稳定地支持。由于克隆之间的单一副本ARC共享块将被一次缓存，使用方法：docker -d -s zfs
-Use docker daemon -s zfs. To select a different zfs filesystem set zfs.fsname option as described in Storage driver options.
+	4. Zfs 没有btrfs那么快，但是对相对较长记录有更稳定地支持。由于克隆之间的单一副本ARC共享块将被一次缓存，使用方法：
+	
+            docker -d -s zfs
 
-	5. Overlay 是一个非常快的联合文件系统，它现在被并入了3.18.0的Linux内核中，使用方法：docker -d -s overlay
+    Use docker daemon -s zfs. To select a different zfs filesystem set zfs.fsname option as described in Storage driver options.
+
+	5. Overlay 是一个非常快的联合文件系统，它现在被并入了3.18.0的Linux内核中，使用方法：
+	
+            docker -d -s overlay
 
 
 
