@@ -222,7 +222,7 @@ dm.override_udev_sync_check 设置该参数为true，可以协调devicemapper �
 	$  docker -d --dns 8.8.8.8
 	$  docker -d --dns-search example.com
 
-* 不安全的仓库
+* 不安全仓库登记
 
 一个安全的私有仓库通过使用TLS和CA证书的副本来替换/etc/docker/certs.d/myregistry:5000/ca.crt文件。不使用TLS，或者使用未知CA证书的TLS都将是不安全的。如果CA证书验证实效或者在/etc/docker/certs.d/myregistry:5000/找不到证书将会报错。使用-insecure-registry参数可以标记一个不安全的仓库：
 
