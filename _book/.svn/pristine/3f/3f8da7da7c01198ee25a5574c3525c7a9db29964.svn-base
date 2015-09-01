@@ -1,0 +1,16 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://git.gitbook.com/jiajially/dockerguide.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = gitbook
+	merge = refs/heads/master
+[remote "gitbook"]
+	url = https://git.gitbook.com/jiajially/dockerguide.git
+	fetch = +refs/heads/*:refs/remotes/gitbook/*

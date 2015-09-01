@@ -1,0 +1,29 @@
+
+## top
+
+* 用法
+
+
+	Usage: docker top [OPTIONS] CONTAINER [ps OPTIONS]
+
+	Display the running processes of a container
+
+    --help=false       Print usage
+
+
+
+* 例子
+
+运行一个之前的例子：
+
+    $ sudo docker run -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done"
+
+然后执行docker top 命令，可以查看到容器内进程
+
+    $ sudo docker top 52c058ff716d
+    UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+    root                6326                1489                0                   23:58               ?                   00:00:00            /bin/sh -c while true; do echo hello world; sleep 1; done
+    root                6410                6326                0                   23:59               ?                   00:00:00            sleep 1
+
+
+
