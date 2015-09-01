@@ -73,45 +73,49 @@ deamon的参数选项：
 	  --tlsverify=false                      Use TLS and verify the remote
 	  --userland-proxy=true                  Use userland proxy for loopback traffic
 
-如果你想要运行守护态进程，你可以输入  docker -d（之前版本是  docker deamon）。如果想加入Debug模式，输入docker -d -D 即可。
+如果你想要运行守护态进程，你可以输入  ```docker -d```（之前版本是  ```docker deamon```）。如果想加入Debug模式，输入```docker -d -D ```即可。
 
 * Deamon socket 选项
 
-Docker deamon 通过三种不同的socket方式监听```docker remote API```请求，分别是：unix、tcp、以及fd。
+Docker deamon 通过三种不同的socket方式监听```docker remote API```请求，分别是：```unix、tcp、以及fd。```
 
-默认情况下，通过创建在/var/run/docer.sock文件内的unix domain socket（或者 IPC socket）来接收root或者docker用户组的请求。如果你想远程通信你需要打开tcpSocket。
+默认情况下，通过创建在```/var/run/docer.sock```文件内的```unix domain socket```（或者 IPC socket）来接收root或者docker用户组的请求。如果你想远程通信你需要打开tcpSocket。
 
-要注意的是，默认的方式提供了一个未加密未验证直接连接deamon。应该使用内置的HTTPS加密的socket或者在前面使用一个安全的web代理。使用-H tcp://0.0.0.02375来监听所有ip地址接口的2375端口，或者指定一个IP监听-H 192.168.2.160:2375。通常情况下2375端口是 iiii未加密的，而2376用于加密端口与deamon通信。
+要注意的是，默认的方式提供了一个未加密未验证直接连接deamon。应该使用内置的HTTPS加密的socket或者在前面使用一个安全的web代理。使用-H ```tcp://0.0.0.0:2375```来监听所有ip地址接口的2375端口，或者指定一个主机IP监听```-H 192.168.2.160:2375```。通常情况下2375端口是 未加密的，而2376用于与deamon通信的加密端口。
 
-	注意：如果你使用HTTPS加密socket ，支持TLS1.0或更高级的协议，不支持Protocols SSLv3或者低于此版本的协议。
+	注意：如果你使用HTTPS加密socket ，目前支持TLS1.0或更高级的协议，不支持Protocols SSLv3或者低于此版本的协议。
 
-在Systemd基础的系统中，使用docker -d -H fd://,通过Systemd soket activation与deamon通信。对于大多数设置，使用fd://将很好的运作，你也可以指定单个socket：docker -d -H fd://3。如果没有找到指定的激活的文件，Docker 将会退出进程。
+在Systemd基础的系统中，使用```docker -d -H fd://```,通过Systemd socket activation与deamon通信。对于大多数设置，使用fd://将很好的运作，你也可以指定单个socket：```docker -d -H fd://3```。如果没有找到指定的激活的文件，Docker 将会退出进程。
 
--H参数可以多次指定监听不同的端口：
+1. **Server端**
 
-例如指定监听主机默认的unix socket以及指定的IP地址：
+    -H参数可以多次指定监听不同的端口：
 
-	$ sudo docker -d -H unix:///var/run/docker.sock  -H tcp://192.168.2.160:2375
+    例如指定监听主机默认的unix socket以及指定的IP地址：
 
-为客户端设置-H参数，将使客户端监听DOCKER_HOST环境变量指定的参数：
+	    $ sudo docker -d -H unix:///var/run/docker.sock  -H tcp://192.168.2.160:2375
 
-	$ docker -H tcp://0.0.0.0:2375 ps
-或者
+2. **Client端**
+
+    为客户端设置-H参数，将使客户端监听```DOCKER_HOST```环境变量指定的参数：
+
+	    $ docker -H tcp://0.0.0.0:2375 ps
+    或者
 	
-    $ export DOCKER_HOST="tcp://0.0.0.0:2375"
-	$ docker ps
+        $ export DOCKER_HOST="tcp://0.0.0.0:2375"
+	    $ docker ps
 
-设置 ```DOCKER_TLS_VERIFY```环境变量相当于设置```--tlsverify```参数：
+    设置 ```DOCKER_TLS_VERIFY```环境变量相当于设置```--tlsverify```参数：
 
-	$ docker --tlsverify ps
-或者
+	    $ docker --tlsverify ps
+    或者
 
-	$ export DOCKER_TLS_VERIFY=1
-	$ docker ps
+	    $ export DOCKER_TLS_VERIFY=1
+	    $ docker ps
 
-以上设置是等效的
+    以上设置是等效的
 
-Docker客户端会遵守HTTP_PROXY,HTTPS_PROXY以及NO_PROXY这三个环境变量运行。其中HTTPS_PROXY优先权大于HTTP_PROXY
+    Docker客户端会遵守```HTTP_PROXY,HTTPS_PROXY以及NO_PROXY```这三个环境变量运行。其中```HTTPS_PROXY```优先权大于```HTTP_PROXY```
 
 
 * storage-driver 选项
@@ -140,96 +144,94 @@ Docker客户端会遵守HTTP_PROXY,HTTPS_PROXY以及NO_PROXY这三个环境变�
 
 * storage-opt选项
 
-dm.thinpooldev,指定块存储设备所使用的thin pool。
+    ***```dm.thinpooldev```***,指定块存储设备所使用的thin pool。
 
-	docker -d --storage-opt dm.thinpooldev=/dev/mapper/thin-pool
+	    docker -d --storage-opt dm.thinpooldev=/dev/mapper/thin-pool
 
-dm.basesize 指定基础存储大小，同时限制镜像以及容器。默认值时100G。
+    ***```dm.basesize```*** 指定基础存储大小，同时限制镜像以及容器。默认值时100G。
 修改此值需要执行以下操作才生效：
 
-	$ sudo service docker stop
-	$ sudo rm -rf /var/lib/docker
-	$ sudo service docker start
+    	$ sudo service docker stop
+    	$ sudo rm -rf /var/lib/docker
+    	$ sudo service docker start
 
-使用方法：
+    使用方法：
 
-	$ docker -d --storage-opt dm.basesize=20G
+	    $ docker -d --storage-opt dm.basesize=20G
 
-dm.loopdatasize 这个选项配置devicemapper looback，这不应该在生产中使用。默认值是100G，用于设定thin pool为数据产生的回送的零散文件存储大小，通常不会占用那么多空间。
+    ***```dm.loopdatasize```*** 这个选项配置devicemapper looback，这不应该在生产中使用。默认值是100G，用于设定thin pool为数据产生的回送的零散文件存储大小，通常不会占用那么多空间。
 
-使用方法：
+    使用方法：
 
-	$ docker -d --storage-opt dm.loopdatasize=200G
+	    $ docker -d --storage-opt dm.loopdatasize=200G
 
-dm.loopmetadatasize 与上面类似，只是设定元数据存储大小。
+    ***```dm.loopmetadatasize```*** 与上面类似，只是设定元数据存储大小。
 
-使用方法
+    使用方法
 
-	$ docker -d --storage-opt dm.loopmetadatasize=4G
+	    $ docker -d --storage-opt dm.loopmetadatasize=4G
 
-dm.fs 设定文件系统基础设备类型，支持的类型是ext4和xfs，默认是ext4
+    ***```dm.fs```*** 设定文件系统基础设备类型，支持的类型是ext4和xfs，默认是ext4
 
-使用方法：
+    使用方法：
 
 	$ docker -d --storage-opt dm.fs=xfs
 
-dm.mkfsarg 设定在创建基础设备时mkfs所用到的参数
+    ***```dm.mkfsarg```*** 设定在创建基础设备时mkfs所用到的参数
 
-使用方法：
+    使用方法：
 
-	$ docker -d --storage-opt "dm.mkfsarg=-O ^has_journal"
+    	$ docker -d --storage-opt "dm.mkfsarg=-O ^has_journal"
 
+    ***```dm.mountopt```*** 挂载设备时设置挂载选项。
 
-dm.mountopt 挂载设备时设置挂载选项。
+    使用方法：
 
-使用方法：
+    	$ docker -d --storage-opt dm.mountopt=nodiscard
 
-	$ docker -d --storage-opt dm.mountopt=nodiscard
+    ***```dm.blocksize```*** 为thin pool 设置块大小。默认是64K
 
-
-dm.blocksize 为thin pool 设置块大小。默认是64K
-
-使用方法：
+    使用方法：
 
 	$ docker -d --storage-opt dm.blocksize=512K
 
-dm.blkdiscard 当删除devicemapper设备时允许或禁止使用blkdiscard 默认是允许（enable）。如果禁止，将会时删除容器更加快速，但是不会返回其中文件的使用空间。
+    ***```dm.blkdiscard```*** 当删除devicemapper设备时允许或禁止使用blkdiscard 默认是允许（enable）。如果禁止，将会时删除容器更加快速，但是不会返回其中文件的使用空间。
 
-使用说明：
+    使用说明：
 
-	$ docker -d --storage-opt dm.blkdiscard=false
+    	$ docker -d --storage-opt dm.blkdiscard=false
 
-dm.override_udev_sync_check 设置该参数为true，可以协调devicemapper 与 udev的资源利用。当其设置为false时，将会在devicemapper与udev产生竞争，有可能导致错误或者失败。
+    ***```dm.override_udev_sync_check```*** 设置该参数为true，可以协调devicemapper 与 udev的资源利用。当其设置为false时，将会在devicemapper与udev产生竞争，有可能导致错误或者失败。
 
-使用方法：
+    使用方法：
 
-	$ docker -d --storage-opt dm.override_udev_sync_check=true
+    	$ docker -d --storage-opt dm.override_udev_sync_check=true
 
 * Docker execdriver选项
 
-目前zfs支持的选项```zfs.fsname```
+    目前zfs支持的选项```zfs.fsname```
 
-使用方法：
+    使用方法：
 
-	$ docker daemon -s zfs --storage-opt zfs.fsname=zroot/docker
+    	$ docker daemon -s zfs --storage-opt zfs.fsname=zroot/docker
 
-另外，可以使用 ```-e lxc``` 来启用```lxcexecution``` 设备
+    另外，可以使用 ```-e lxc``` 来启用```lxcexecution``` 设备
 
 * Daemon DNS选项
 
-设置dns 服务器
+    设置dns 服务器
 
-	$  docker -d --dns 8.8.8.8
-	$  docker -d --dns-search example.com
+    	$  docker -d --dns 8.8.8.8
+    	$  docker -d --dns-search example.com
 
 * 不安全仓库登记
 
-一个安全的私有仓库通过使用TLS和CA证书的副本来替换```/etc/docker/certs.d/myregistry:5000/ca.crt```文件。不使用TLS，或者使用未知CA证书的TLS都将是不安全的。如果CA证书验证实效或者在```/etc/docker/certs.d/myregistry:5000/```找不到证书将会报错。使用```--insecure-registry```参数可以标记一个不安全的仓库：
+    一个安全的私有仓库通过使用TLS和CA证书的副本来替换```/etc/docker/certs.d/myregistry:5000/ca.crt```文件。不使用TLS，或者使用未知CA证书的TLS都将是不安全的。如果CA证书验证实效或者在```/etc/docker/certs.d/myregistry:5000/```找不到证书将会报错。使用```--insecure-registry```参数可以标记一个不安全的仓库：
 
-	--insecure-registry myregistry:5000
+    	--insecure-registry myregistry:5000
 将告诉 deamon 这个```myregistry:5000```仓库应该标记为不安全状态。
 
-	--insecure-registry 10.1.0.0/16
-告诉deamon通过CIDR语法解析出来的IP地址是10.1.0.0/16的仓库标记为不安全。
+    	--insecure-registry 10.1.0.0/16
+告诉deamon通过CIDR语法解析出来的IP地址是```10.1.0.0/16```的仓库标记为不安全。
 
-如果没有使用参数```--insecure-registry```标记，那么```docker pull 、docker push、docker search``` 从指定仓库执行时将会报错。
+    如果没有使用参数```--insecure-registry```标记，那么```docker pull 、docker push、docker search``` 从指定仓库执行时将会报错。
